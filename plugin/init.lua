@@ -171,7 +171,7 @@ wez.on("update-status", function(window, pane)
     {
       name = "clock",
       func = function()
-        return wez.time.now():format "%h:%M"
+        return wez.time.now():format "%I:%M"
       end,
     },
     {
