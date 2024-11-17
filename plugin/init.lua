@@ -14,8 +14,8 @@ end
 
 --- Returns the name of the package, used when requiring modules
 local function get_require_path()
-  local path = "httpssCssZssZsgithubsDscomsZsadriankarlensZsbarsDswezterm"
-  local path_trailing_slash = "httpssCssZssZsgithubsDscomsZsadriankarlensZsbarsDsweztermsZs"
+  local path = "httpssCssZssZsgithubsDscomsZsbartdorseyZsbarsDswezterm"
+  local path_trailing_slash = "httpssCssZssZsgithubsDscomsZsbartdorseyZsbarsDsweztermsZs"
   return directory_exists(path_trailing_slash) and path_trailing_slash or path
 end
 
@@ -171,7 +171,7 @@ wez.on("update-status", function(window, pane)
     {
       name = "clock",
       func = function()
-        return wez.time.now():format "%H:%M"
+        return wez.time.now():format "%h:%M"
       end,
     },
     {
