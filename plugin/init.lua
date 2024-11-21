@@ -180,6 +180,15 @@ wez.on("update-status", function(window, pane)
         return paths.get_cwd(pane, true)
       end,
     },
+    {
+      name = "weather",
+      func = function()
+        local open = assert(io.popen("curl https://wttr.in/conway?format=2", "r"))
+        local output = open:read "*all"
+        open:close()
+        return output
+      end,
+    },
   }
 
   for _, callback in ipairs(callbacks) do
